@@ -41,6 +41,7 @@ var download = function(uri, filename, callback) {
 };
 
 client.on('message', function(message) {
+	if (message.author.id !== "327042370644213761") return;
     const member = message.member;
     const mess = message.content.toLowerCase();
     const args = message.content.split(' ').slice(1).join(' ');
